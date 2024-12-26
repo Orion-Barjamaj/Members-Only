@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="/signup.css">
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <h1 class="header">Create Account</h1>
+            <p class="welcomeParagraph">Hello and welcome to my members only web app. Complete the fields below to get started!</p>
+            <form action="/sign-up" method="post">
+                <div class="nameContainer">
+                    <div class="nameInput">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" class="firstName input" placeholder="Enter your first name">
+                    </div>
+                    <div class="nameInput">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" class="lastName input" placeholder="Enter your last name">
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="username input" placeholder="Enter your username">
+                </div>
+                <div class="inputContainer">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="password input" placeholder="Enter your password">
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="submit">Create Account</button>
+                    <a href="/" class="goBack">Go Back</a>
+                </div>
+            </form>
+        </div>
+        <div class="right-container">
+            <div class="glass"></div>
+            <div class="ball"></div>
+        </div>
+    </div>
+</body>
+</html>

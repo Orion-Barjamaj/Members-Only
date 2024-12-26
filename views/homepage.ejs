@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="/homepage.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome <%= user.username %></h1>
+        <div class="buttonContainer">
+            <a href="/Become-Member">Become Member</a>
+            <div class="or">
+                <div class="line"></div>
+                <div>OR</div>
+                <div class="line"></div>
+            </div>
+            <a href="/Add-Message" class="addMsgBtn">Add Message</a>
+        </div>
+        <div class="messageContainer">
+            <% if(locals.messages){ %>
+                <% messages.map((message) => { %>
+                    <div class="message">
+                        <p class="messageContent"><%= message.message %></p>
+                        <div class="info">
+                            <div class="creator">Made By: 
+                                <% if(user.admin) { %>
+                                    <%= message.creator %>
+                                <% } else { %>
+                                    You need to be a member to see this.
+                                <% } %>
+                            </div>
+                            <div class="date">Posted On:      
+                                <% if(user.admin) { %>
+                                    <%= message.date %>
+                                <% } else { %>
+                                    You need to be a member to see this.
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <div>No Messages</div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

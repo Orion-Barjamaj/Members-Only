@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-In</title>
+    <link rel="stylesheet" href="/signup.css">
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <h1 class="header">Log In</h1>
+            <p class="welcomeParagraph">Hello and welcome to my members only web app. Complete the fields below to log into your account!</p>
+            <form action="/log-in" method="post">
+                <div class="inputContainer">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="username input" placeholder="Enter your username">
+                </div>
+                <div class="inputContainer">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="password input" placeholder="Enter your password">
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="submit">Log In</button>
+                    <a href="/" class="goBack">Go Back</a>
+                </div>
+            </form>
+        </div>
+        <div class="right-container">
+            <div class="glass"></div>
+            <div class="ball"></div>
+        </div>
+    </div>
+</body>
+</html>
