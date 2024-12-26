@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 300px;
+    gap: 40px;
+}
+
+h1{
+    font-weight: 100;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.btnContainer{
+    display: flex;
+    gap: 20px;
+}
+
+a{
+    text-decoration: none;
+    width: 250px;
+    height: 60px;
+    background-color: #146C94;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.login{
+    background-color: transparent !important;
+    color: #146C94;
+    border: 1px solid #146C94;
+}
+
+body {  
+    background-image: radial-gradient(circle, rgb(203 213 225) 2px, #F6F1F1 2px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
+}

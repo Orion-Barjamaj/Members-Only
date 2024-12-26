@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form{ 
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.textarea{
+    background-color: white;
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 500px;
+    max-width: 500px;
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+button{
+    width: 130px;
+    height: 35px;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #146C94;
+    color: white;
+    border-radius: 5px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.becomeMemberBtn{
+    width: 100% !important;
+    height: 40px;
+}
+
+.becomemMEMBER{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input{
+    height: 30px;
+    padding: 10px;
+}

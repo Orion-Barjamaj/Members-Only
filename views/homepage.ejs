@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/homepage.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container animation">
         <h1>Welcome <%= user.username %></h1>
         <div class="buttonContainer">
             <a href="/Become-Member">Become Member</a>
@@ -26,14 +26,14 @@
                         <p class="messageContent"><%= message.message %></p>
                         <div class="info">
                             <div class="creator">Made By: 
-                                <% if(user.admin) { %>
+                                <% if(user.ismember) { %>
                                     <%= message.creator %>
                                 <% } else { %>
                                     You need to be a member to see this.
                                 <% } %>
                             </div>
                             <div class="date">Posted On:      
-                                <% if(user.admin) { %>
+                                <% if(user.ismember) { %>
                                     <%= message.date %>
                                 <% } else { %>
                                     You need to be a member to see this.
@@ -46,6 +46,14 @@
                 <div>No Messages</div>
             <% } %>
         </div>
+        <a href="log-out">Log Out</a>
     </div>
+    <script>
+        document.querySelectorAll('.messageContent').forEach(textElement => {
+            textElement.addEventListener('click', () => {
+                textElement.classList.toggle('expanded');
+            });
+        });
+    </script>
 </body>
 </html>

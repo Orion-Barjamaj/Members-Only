@@ -59,19 +59,35 @@
 }
 
 .message{
-    background-color: #e7e1e1;
+    background-color: white;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    overflow-wrap: break-word;
 }
 
 .messageContent{
     font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;  
+    text-overflow: ellipsis;   
+    cursor: pointer;           
+}
+
+.messageContent.expanded {
+    white-space: normal;
+    overflow: visible;
 }
 
 .info{
     font-weight: 100;
+}
+
+body {  
+    background-image: radial-gradient(circle, rgb(203 213 225) 2px, #F6F1F1 2px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
 }

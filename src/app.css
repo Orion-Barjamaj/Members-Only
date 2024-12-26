@@ -12,3 +12,18 @@ body{
     align-items: flex-start;
     background-color: #F6F1F1;
 }
+
+.animation{
+    animation: fadeIn .5s ease-in-out 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}

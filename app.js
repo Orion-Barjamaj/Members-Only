@@ -34,6 +34,7 @@ app.use(session({
     secret: "keyboard cat", 
     resave: false, 
     saveUninitialized: false, 
+    cookie: { maxAge: 7500000 },
 }));
 
 app.use(passport.initialize());
@@ -90,14 +91,5 @@ app.use('/', homePage);
 app.use('/', logIn);
 app.use('/', addMessage);
 app.use('/', becomeMember);
-
-app.post(
-  "/log-in",
-  passport.authenticate("local", {
-    successRedirect: "/HomePage",
-    failureRedirect: "/error"
-  })
-);
-
 
 app.listen(3000, () => console.log("app listening on port 3000!"));

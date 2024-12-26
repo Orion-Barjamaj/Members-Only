@@ -8,28 +8,39 @@
     <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container animation">
         <div class="left-container">
             <h1 class="header">Create Account</h1>
             <p class="welcomeParagraph">Hello and welcome to my members only web app. Complete the fields below to get started!</p>
+            <% if(locals.errors) { %>
+                <ul class="errorContainer">
+                    <% errors.map((error) => { %> 
+                        <div>• <%= error.msg %></div>
+                    <% }) %>
+                </ul>
+            <% } %>
             <form action="/sign-up" method="post">
                 <div class="nameContainer">
                     <div class="nameInput">
                         <label for="firstName">First Name</label>
-                        <input type="text" name="firstName" class="firstName input" placeholder="Enter your first name">
+                        <input type="text" name="firstName" class="firstName input" value="<%= inputData ? inputData.firstName : '' %>" placeholder="Enter your first name">
                     </div>
                     <div class="nameInput">
                         <label for="lastName">Last Name</label>
-                        <input type="text" name="lastName" class="lastName input" placeholder="Enter your last name">
+                        <input type="text" name="lastName" class="lastName input" value="<%= inputData ? inputData.lastName : '' %>" placeholder="Enter your last name">
                     </div>
                 </div>
                 <div class="inputContainer">
                     <label for="username">Username</label>
-                    <input type="text" name="username" class="username input" placeholder="Enter your username">
+                    <input type="text" name="username" class="username input" value="<%= inputData ? inputData.username : '' %>" placeholder="Enter your username">
                 </div>
                 <div class="inputContainer">
                     <label for="password">Password</label>
-                    <input type="password" name="password" class="password input" placeholder="Enter your password">
+                    <input type="password" name="password" class="password input" value="<%= inputData ? inputData.password : '' %>" placeholder="Enter your password">
+                </div>
+                <div class="inputContainer">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" name="confirmPassword" class="password input" value="<%= inputData ? inputData.confirmPassword : '' %>" placeholder="Retype your password">
                 </div>
                 <div class="buttons">
                     <button type="submit" class="submit">Create Account</button>

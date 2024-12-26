@@ -12,7 +12,7 @@ module.exports = {
             console.log('I became Member', req.user.ismember);
             res.redirect('/HomePage');
         }else {
-            res.send(401);
+            res.render('../views/becomeMember');
         }
     }
 }
