@@ -8,11 +8,7 @@ var bcrypt = require('bcryptjs');
 require('dotenv').config();
 
 const pool = new Pool({
-  host: process.env.DATABASE_HOST,
-  database: process.env.DATABASE_NAME,
-  username: process.env.DATABASE_USER,
-  password: process.env.DATABASE_PASSWORD,
-  ssl: 'require',
+  connectionString: process.env.DATABASE_URL,
 });
 
 async function getPgVersion() {
@@ -90,6 +86,7 @@ const homePage = require('./routes/homepage');
 const logIn = require('./routes/logIn');
 const addMessage = require('./routes/addMeassageRoute');
 const becomeMember = require('./routes/becomeMember');
+const { connectionString } = require("pg/lib/defaults");
 app.use('/', signUp);
 app.use('/', homePage);
 app.use('/', logIn);
