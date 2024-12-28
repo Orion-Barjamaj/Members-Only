@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Become Member</title>
     <link rel="stylesheet" href="/app.css">
+    <link rel="icon" href="./logo" type="image/icon type">
     <link rel="stylesheet" href="/addmessage.css">
 </head>
 <body>
@@ -13,7 +14,10 @@
         <p>Enter the secret code to become a member.</p>
         <form action="/Become-Member" method="post" class="becomemMEMBER">
             <input type="text" name="secretCode" class="secretInput">
-            <button class="submit becomeMemberBtn" type="submit">Become Member</button>
+            <div class="btnContainer btnContainerMember">
+                <a href="/HomePage" class="goBack becomeMemberLink">Go Back</a>
+                <button class="submit becomeMemberBtn" type="submit">Become Member</button>
+            </div>
         </form>
     </div>
 </body>

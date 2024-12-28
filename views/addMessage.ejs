@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Message</title>
+    <link rel="icon" href="./logo" type="image/icon type">
     <link rel="stylesheet" href="/app.css">
     <link rel="stylesheet" href="/addmessage.css">
 </head>
@@ -12,7 +13,10 @@
         <h1>Add Message</h1>
         <form method="post" action="/Add-Message">
             <textarea name="message" class="textarea" placeholder="Create message..."></textarea>
-            <button type="submit">Create Message</button>
+            <div class="btnContainer">
+                <a href="/HomePage" class="goBack">Go Back</a>
+                <button type="submit">Create Message</button>
+            </div>
         </form>
     </div>
 </body>

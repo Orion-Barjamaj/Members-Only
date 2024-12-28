@@ -31,7 +31,7 @@ module.exports = {
                     res.redirect('/');
                 }else{
                     await queries.addUser(firstName, lastName, username, hashedPassword);
-                    res.redirect('/')
+                    res.redirect('/log-in')
                 }
             });
         }

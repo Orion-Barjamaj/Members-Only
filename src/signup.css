@@ -139,3 +139,18 @@ form{
     color: rgb(150, 0, 0);
     width: 100%;
 }
+
+.ballMobile{
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) { /* Tablet */ 
+    .left-container{
+        width: 100%;
+        padding: 150px 70px;
+    }
+    
+    .right-container{
+        display: none;
+    }
+}

@@ -6,6 +6,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="/app.css">
     <link rel="stylesheet" href="/homepage.css">
+    <link rel="icon" href="./logo" type="image/icon type">
 </head>
 <body>
     <div class="container animation">
@@ -20,7 +21,7 @@
             <a href="/Add-Message" class="addMsgBtn">Add Message</a>
         </div>
         <div class="messageContainer">
-            <% if(locals.messages){ %>
+            <% if(locals.messages.length > 0){ %>
                 <% messages.map((message) => { %>
                     <div class="message">
                         <p class="messageContent"><%= message.message %></p>
@@ -43,7 +44,10 @@
                     </div>
                 <% }) %>
             <% } else { %>
-                <div>No Messages</div>
+                <div class="emptyContainer">
+                    <div class="empty-img"></div>
+                    <div>There are no messages here. Be the first one to create one!</div>
+                </div>
             <% } %>
         </div>
         <a href="log-out">Log Out</a>

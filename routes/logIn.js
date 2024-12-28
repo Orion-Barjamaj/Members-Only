@@ -8,7 +8,7 @@ router.post(
     "/log-in",
     passport.authenticate("local", {
       successRedirect: "/HomePage",
-      failureRedirect: "/error"
+      failureRedirect: "/"
     })
 );
 
