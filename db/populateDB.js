@@ -8,7 +8,13 @@ const SQL = `
         lastName VARCHAR (255),
         userName VARCHAR (255),
         password VARCHAR (255),
-        isMember BOOLEAN);`
+        isMember BOOLEAN);
+        
+    CREATE TABLE IF NOT EXISTS messages (
+      id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+      message TEXT,
+      creator TEXT,
+      date TEXT);`
 ;
 
 async function main() {
