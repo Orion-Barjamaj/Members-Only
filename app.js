@@ -6,9 +6,18 @@ const passport = require("passport");
 const LocalStrategy = require('passport-local').Strategy;
 var bcrypt = require('bcryptjs');
 require('dotenv').config();
+const pgSession = require('connect-pg-simple')(session);
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  host: process.env.DB_Host,
+  port: process.env.DB_Port,
+  user: process.env.DB_User,
+  password: process.env.DB_Pass,
+  database: process.env.DB_Data,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  ssl: true
 });
 
 async function getPgVersion() {
@@ -31,6 +40,10 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(session({ 
+  store: new pgSession({
+    conString: process.env.DATABASE_URL,
+    createTableIfMissing: true,
+  }),
     secret: "keyboard cat", 
     resave: false, 
     saveUninitialized: false, 

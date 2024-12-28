@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Orion-Barjamaj/Members-Only#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "connect-pg-simple": "^10.0.0",
     "connect-sqlite3": "^0.9.15",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
